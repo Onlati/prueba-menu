@@ -16,7 +16,7 @@ function prueba_menu_shortcode() {
 <header class="headers" id="headers-movil" data-header-sticky="true">
     <div class="headers__container">
       <a class="headers__logo" id="logo" href="" title="Formación Online: KSchool">
-            <img class="headers__img" style="max-width: 9rem;" src="https://prueba.pixelariun.com/wp-content/plugins/menu/src/img/logo.png" alt="logo Kschool">
+            <img class="headers__img" style="max-width: 9rem;" src="https://prueba.pixelariun.com/wp-content/uploads/2025/01/logo.png" alt="logo Kschool">
       </a>
       <nav class="headers__nav">
         <div class="headers__nav-container">
