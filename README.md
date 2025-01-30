@@ -21,6 +21,10 @@ Para mostrar el menú en cualquier parte de tu sitio, usa el siguiente shortcode
 [prueba-menu]
 ```
 
+## Visualización rápida
+He creado un wordpress limpio donde he insertado el shortcode para que puedan revisarlo rapidamente en caso de requerirlo
+https://prueba.pixelariun.com/
+
 ## Estructura de archivos  
 
 ```
