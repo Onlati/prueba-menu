@@ -1,0 +1,361 @@
+.headers {
+    transition: .3s;
+    background: #000;
+    position: sticky;
+    z-index: 120;
+    top: 0;
+    display: flex;
+    max-height: 4.5rem;
+    margin: 0;
+    padding: 0;
+}
+.headers[data-header-sticky=false] {
+    position: relative;
+}
+.headers[data-header-sticky=false].is-open {
+    position: fixed;
+}
+@media screen and (min-width: 1024px) {
+    .headers[data-header-sticky=false].is-open {
+        position: relative;
+    }
+}
+.headers__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    max-width: 1320px;
+}
+.headers__logo {
+    order: 1;
+    display: inline-flex;
+}
+.headers__img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 9.375rem !important;
+}
+.headers__nav {
+    display: none;
+}
+.headers__dropdown-title,
+.headers__button-text,
+.headers__link {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.headers__dropdown-title,
+.headers__item.-link > .headers__link {
+    position: relative;
+}
+.headers__dropdown-title::after,
+.headers__item.-link > .headers__link::after {
+    content: "";
+    display: block;
+    height: 2.5px;
+    width: 0;
+    background: #FEC14B;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -19px; 
+    left: 0;
+}
+.headers__dropdown-title:hover::after,
+.headers__item.-link > .headers__link:hover::after {
+    width: 100%;
+}
+
+.headers__buttons {
+    order: 0;
+}
+.headers__buttons-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.headers__button-item {
+    display: inline-block;
+}
+.headers__button-text {
+    display: none;
+}
+.headers__hamburguer {
+    order: 2;
+    width: 25px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+.headers__hamburguer::before,
+.headers__hamburguer::after,
+.headers__hamburguer .headers__hamburguer-icon {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    transition: all .2s ease-in-out;
+}
+.headers__logo-unir {
+    display: none;
+    cursor: pointer;
+}
+.headers svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: #fff;
+}
+
+/* ----- HEADER ABIERTO (MÓVIL) ----- */
+.headers.is-open {
+    position: fixed;
+    top: 0 !important;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    transition: .5s;
+    z-index: 999999;
+    max-height: -webkit-fill-available;
+}
+.headers.is-open .headers__container {
+    align-items: flex-start;
+    margin: inherit;
+}
+.headers.is-open .headers__nav {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 66px;
+    border-top: 3px solid #ffc72c;
+}
+.headers.is-open .headers__nav-container {
+    width: 100%;
+}
+.headers.is-open .headers__buttons {
+    display: none;
+}
+.headers.is-open .headers__logo-unir {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 5%;
+}
+.headers.is-open .headers__hamburguer::before {
+    background-color: #ffc72c;
+    transform: translateY(6px) rotate(135deg);
+}
+.headers.is-open .headers__hamburguer::after {
+    background-color: #ffc72c;
+    transform: translateY(-6px) rotate(-135deg);
+}
+.headers.is-open .headers__hamburguer-icon {
+    transform: scale(0);
+}
+.headers.is-open .headers__item.-login {
+    display: none;
+}
+.headers.is-open .headers__item.-job svg {
+    display: none;
+}
+.headers.is-open .headers__item.-job .headers__link,
+.headers.is-open .headers__item.-login .headers__link,
+.headers.is-open .headers__item.-link .headers__link {
+    padding: 1rem;
+}
+.header__title.is-active::after {
+    width: 100%;
+}
+
+
+/* ----- SUBMENÚ EN MÓVIL ----- */
+.headers.is-open .headers__dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #4e4e4e;
+}
+.headers.is-open .headers__dropdown:hover {
+    color: #ffc72c;
+    cursor: pointer;
+}
+.headers.is-open .headers__dropdown-title {
+    color: #fff;
+}
+.headers.is-open .headers__dropdown-inner {
+    display: none;
+}
+.headers.is-open .headers__subnav {
+    display: flex;
+    flex-direction: column;
+    background-color: #3a3a3a;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.headers.is-open .headers__link {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid #4e4e4e;
+    color: #fff;
+}
+.headers.is-open .headers__link:hover {
+    color: #ffc72c;
+    cursor: pointer;
+}
+.headers.is-open .headers__button-text {
+    display: block;
+}
+.headers.is-open .headers__item.is-open-navbar .headers__dropdown {
+    color: #ffc72c;
+}
+.headers.is-open .headers__item.is-open-navbar .headers__dropdown-title {
+    color: #ffc72c;
+}
+.headers.is-open .headers__item.is-open-navbar .headers__dropdown-inner {
+    display: block;
+}
+
+/* ----- ESTILOS DESKTOP (+1024PX) ----- */
+@media screen and (min-width: 1024px) {
+    .headers__container {
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    .headers__logo {
+        order: 0;
+        width: 148px;
+        display: flex;
+        align-items: center;
+    }
+    .headers__nav {
+        display: block;
+        order: 1;
+        width: 100%;
+    }
+    .headers__content {
+        display: flex;
+        align-items: center;
+    }
+    .headers__content .headers__link:hover {
+        color: #ffc72c;
+    }
+    .headers__dropdown {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+    }
+    .headers__dropdown-inner {
+        display: none;
+        position: absolute;
+        background: #303030;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .headers__dropdown-inner.is-open-navbar {
+        display: block;
+    }
+    .headers .headers__subnav {
+        display: flex;
+        gap: 1.5rem;
+        margin: auto;
+        max-width: 1320px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+    }
+    .headers .headers__subnav .headers__link {
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: .5rem;
+        background: rgba(255,255,255,.05);
+        color: #fff;
+    }
+    .headers .headers__subnav .headers__link:hover {
+        background: #ffc72c;
+        color: #000;
+    }
+    .headers__item {
+        padding-right: 2rem;
+    }
+    .headers__item:hover .headers__dropdown-title,
+    .headers__item.is-open-navbar .headers__dropdown-title {
+        color: #ffc72c;
+    }
+    .headers__item.is-open-navbar .headers__dropdown-title::after {
+    width: 100%;
+    }
+    .headers__item.-job,
+    .headers__item.-login,
+    .headers__item.-link {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+    .headers__item.-job {
+        margin-left: auto;
+    }
+    .headers__button-text {
+        display: inline-block;
+        margin-top: 1px;
+        margin-left: .5rem;
+    }
+    .headers__buttons {
+        display: none;
+    }
+    .headers__hamburguer {
+        display: none;
+    }
+    .headers__logo-unir {
+        display: flex;
+        order: 2;
+        padding-left: 1rem;
+        border-left: 1px solid rgba(255,255,255,.5);
+        height: 3.875rem;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .headers__dropdown-title::after,
+    .headers__item.-link > .headers__link::after {
+        display: none !important;
+    }
+
+    .headers.is-open .headers__dropdown:hover .headers__dropdown-title {
+        color: #FEC14B;
+    }
+}
+
+/*# sourceMappingURL=style.css.map*/
