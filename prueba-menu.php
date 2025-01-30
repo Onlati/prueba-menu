@@ -27,9 +27,11 @@ function prueba_menu_shortcode() {
               </div>
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
-                  <li><a class="headers__link" href="#">Marketing School</a></li>
+                  <li><a class="headers__link" href="#">Digital Marketing School</a></li>
                   <li><a class="headers__link" href="#">Tech School</a></li>
                   <li><a class="headers__link" href="#">Business School</a></li>
+                  <li><a class="headers__link" href="#">Sports School</a></li>
+                  <li><a class="headers__link" href="#">Education School</a></li>
                 </ul>
               </div>
             </li>
@@ -40,7 +42,7 @@ function prueba_menu_shortcode() {
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
                   <li><a class="headers__link" href="#">Conócenos</a></li>
-                  <li><a class="headers__link" href="#">Profesores</a></li>
+                  <li><a class="headers__link" href="#">Nuestros Profesores</a></li>
                 </ul>
               </div>
             </li>
@@ -50,8 +52,9 @@ function prueba_menu_shortcode() {
               </div>
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
-                  <li><a class="headers__link" href="#">Empleo</a></li>
+                  <li><a class="headers__link" href="#">Network</a></li>
                   <li><a class="headers__link" href="#">Eventos</a></li>
+                  <li><a class="headers__link" href="#">Empleo</a></li>
                 </ul>
               </div>
             </li>
