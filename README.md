@@ -1,7 +1,9 @@
 # Prueba Menu
 
 ## Descripción  
-**Prueba Menu** es un plugin de WordPress que inyecta un menú de navegación (header + versión móvil) a través del shortcode `[prueba-menu]`.  
+**Prueba Menu** es un plugin de WordPress que inyecta un menú de navegación (header + versión móvil) a través del shortcode
+
+`[prueba-menu]`.  
 
 ## Características  
 **Header responsivo** que se adapta a todos los dispositivos.  
@@ -10,8 +12,8 @@
 **Optimización con Webpack** para assets (JS y CSS).  
 
 ## Instalación  
-1. **Descarga** este repositorio o clónalo en tu instalación de WordPress.  
-2. **Sube** la carpeta `prueba-menu` al directorio `wp-content/plugins/`.  
+1. **Descarga** este repositorio como .zip o clónalo en tu instalación de WordPress.  
+2. **Instala** el zip directamente como un pligin desde el panel de administración de WordPress o extrae y sube la carpeta `prueba-menu` al directorio `wp-content/plugins/`  
 3. **Activa** el plugin desde el panel de administración de WordPress.  
 
 ## Uso  
