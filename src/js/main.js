@@ -7,15 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.setAttribute("data-open", "false");
     }
 
-    // Manejo del ícono hamburguesa (abrir/cerrar menú)
+    // Manejo del ícono hamburguesa (abrir/cerrar menú) SOLO EDITADO
     hamburger.addEventListener("click", function (e) {
         e.stopPropagation();
-        var isOpen = this.getAttribute("data-open") === "true";
-        if (!isOpen) {
-            header.classList.add("is-open");
-            this.setAttribute("data-open", "true");
-        } else {
-            closeMenu();
+        // Solo ejecutamos el toggle si es móvil
+        if (window.innerWidth < 1024) {
+            var isOpen = this.getAttribute("data-open") === "true";
+            if (!isOpen) {
+                header.classList.add("is-open");
+                this.setAttribute("data-open", "true");
+            } else {
+                header.classList.remove("is-open");
+                this.setAttribute("data-open", "false");
+            }
         }
     });
 
