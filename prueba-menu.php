@@ -10,6 +10,21 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+
+
+function mi_plugin_enqueue_font_awesome() {
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        array(),
+        '6.5.1'
+    );
+}
+add_action('wp_enqueue_scripts', 'mi_plugin_enqueue_font_awesome');
+
+
+
+
 function prueba_menu_shortcode() {
     ob_start();
     ?>
@@ -23,7 +38,7 @@ function prueba_menu_shortcode() {
           <ul class="headers__content" style="padding-inline-start: 0px !important;" id="menu-menu-principal">
             <li class="headers__item">
               <div class="headers__dropdown">
-                <span class="headers__dropdown-title">Programas</span>
+                  <span class="headers__dropdown-title">Programas</span><i style="font-size: 24px;" class="fa fa-chevron-down"></i>
               </div>
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
@@ -37,7 +52,7 @@ function prueba_menu_shortcode() {
             </li>
             <li class="headers__item">
               <div class="headers__dropdown">
-                <span class="headers__dropdown-title">Somos KS</span>
+                  <span class="headers__dropdown-title">Somos KS</span><i style="font-size: 24px;" class="fa fa-chevron-down"></i>
               </div>
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
@@ -48,7 +63,7 @@ function prueba_menu_shortcode() {
             </li>
             <li class="headers__item">
               <div class="headers__dropdown">
-                <span class="headers__dropdown-title">KS Talent</span>
+                  <span class="headers__dropdown-title">KS Talent</span><i style="font-size: 24px;" class="fa fa-chevron-down"></i>
               </div>
               <div class="headers__dropdown-inner">
                 <ul class="headers__subnav">
